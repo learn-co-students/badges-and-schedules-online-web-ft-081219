@@ -12,10 +12,9 @@ end
 
 def assign_rooms(name)
     rooms_assigments = []
-    
-    
+    room = 1
     name.each do |list|
-      
+      room =+ 1
       
       rooms_assigments.push( "Hello, #{list}! You'll be assigned to room #{room}!")
       
