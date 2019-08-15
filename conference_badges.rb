@@ -12,17 +12,18 @@ end
 
 def assign_rooms(name)
     rooms_assigments = []
-    room = 1
-    name.each do |list|
-      room =+ 1
-      
-      rooms_assigments.push( "Hello, #{list}! You'll be assigned to room #{room}!")
-      
-    end
-    
+      name.each_with_index  do |list, index| 
+      rooms_assigments.push( "Hello, #{list}! You'll be assigned to room #{index + 1 }!")
+      end
     return rooms_assigments
 end
   
-def printer 
+def printer(attendees)
   
+    batch_badge_creator(attendees).each do |badge|
+      puts "#{badge}"
+    end
+    assign_rooms(attendees).each_with_index do |name, index|
+      puts "#{name}"
+    end
 end
