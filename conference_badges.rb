@@ -22,8 +22,10 @@ def printer(array)
      batch_badge_creator(array).each do |badges|
       puts "#{badges}"
     end
+      assign_rooms(array).each do |rooms|
+      puts "#{rooms}"
+  end
 end
-
 
 #define badge_maker
 # define conference_badges
